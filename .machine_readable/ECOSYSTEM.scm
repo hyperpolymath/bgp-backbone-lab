@@ -1,20 +1,8 @@
 ;; SPDX-License-Identifier: PMPL-1.0-or-later
-;; ECOSYSTEM.scm - Ecosystem position for bgp-backbone-lab
-;; Media-Type: application/vnd.ecosystem+scm
-
-(ecosystem
-  (version "1.0")
-  (name "bgp-backbone-lab")
-  (type "")
-  (purpose "")
-
-  (position-in-ecosystem
-    (category "")
-    (subcategory "")
-    (unique-value ()))
-
-  (related-projects ())
-
-  (what-this-is ())
-
-  (what-this-is-not ()))
+(ecosystem (metadata (version "0.2.0") (last-updated "2026-02-08"))
+  (project (name "bgp-backbone-lab") (purpose "eBGP backbone simulation with containerlab") (role network-lab))
+  (flatracoon-integration
+    (parent "flatracoon/netstack")
+    (layer network)
+    (depended-on-by ())
+    (depends-on ())))
