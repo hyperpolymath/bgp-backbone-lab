@@ -7,3 +7,6 @@ default:
 # Run panic-attack assail
 assail:
     panic-attack assail .
+
+secret-scan-trufflehog:
+    @command -v trufflehog >/dev/null && trufflehog filesystem . --only-verified || true
