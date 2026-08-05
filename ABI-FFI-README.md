@@ -1,6 +1,6 @@
 {{~ Aditionally delete this line and fill out the template below ~}}
 
-# {{PROJECT}} ABI/FFI Documentation
+# BGP_BACKBONE_LAB ABI/FFI Documentation
 
 ## Overview
 
@@ -247,7 +247,7 @@ gcc -o example example.c -l{{project}} -L./zig-out/lib
 ### From Idris2
 
 ```idris
-import {{PROJECT}}.ABI.Foreign
+import BGP_BACKBONE_LAB.ABI.Foreign
 
 main : IO ()
 main = do
