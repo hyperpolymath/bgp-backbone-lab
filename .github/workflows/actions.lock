@@ -3,25 +3,25 @@
 # Docs: https://gh.io/actions-lockfile
 version: 'v0.0.2'
 workflows:
+    '.github/workflows/codeql.yml':
+        - 'actions/checkout@v7.0.1'
+        - 'github/codeql-action@v4.37.6'
     '.github/workflows/governance.yml': []
     '.github/workflows/hypatia-scan.yml': []
     '.github/workflows/label-triage.yml': []
     '.github/workflows/labels.yml': []
-    '.github/workflows/mirror.yml': []
-    '.github/workflows/scorecard.yml': []
-    '.github/workflows/secret-scanner.yml': []
-    '.github/workflows/codeql.yml':
-        - 'actions/checkout@v7.0.1'
-        - 'github/codeql-action@v4.37.6'
     '.github/workflows/main-estate-audit.yml':
         - 'actions/checkout@v4.4.0'
         - 'hyperpolymath/cicd-suite@main'
+    '.github/workflows/mirror.yml': []
     '.github/workflows/pages.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/deploy-pages@v5.0.0'
         - 'actions/upload-pages-artifact@v5.0.0'
     '.github/workflows/push-email-notify.yml':
-        - 'dawidd6/action-send-mail@v3.12.0'
+        - 'hyperpolymath/smtp-notify-action@v0.1.0'
+    '.github/workflows/scorecard.yml': []
+    '.github/workflows/secret-scanner.yml': []
 dependencies:
     'actions/checkout@v4.4.0':
         ref: 'v4.4.0'
@@ -50,11 +50,6 @@ dependencies:
         repo_id: 496012378
         uses:
             - 'actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f'
-    'dawidd6/action-send-mail@v3.12.0':
-        ref: 'v3.12.0'
-        commit: 'sha1-0bbdab096651ee93f37ec02383e088183d41ff0b'
-        owner_id: 9713907
-        repo_id: 222439721
     'github/codeql-action@v4.37.6':
         ref: 'v4.37.6'
         commit: 'sha1-5595ccaf912efad79be6eef63a5619ff05969be3'
@@ -65,3 +60,8 @@ dependencies:
         commit: 'sha1-a3cd79fba541444c619902330d0b618eb1612634'
         owner_id: 6759885
         repo_id: 1326697643
+    'hyperpolymath/smtp-notify-action@v0.1.0':
+        ref: 'v0.1.0'
+        commit: 'sha1-1b3b752d39a4fe4c0f28f10905e4608789d3e050'
+        owner_id: 6759885
+        repo_id: 1352485172
